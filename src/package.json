@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node build/server.js",
     "build:server": "babel src -d build",
-    "build:assets" : "webpack --mode=production --config webpack.config.js",
+    "build:assets": "webpack --mode=production --config webpack.config.js",
     "dev": "nodemon --exec babel-node src/server.js",
     "assets": "webpack --mode=development --config webpack.config.js"
   },

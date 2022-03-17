@@ -2,6 +2,7 @@ import "regenerator-runtime";
 import express from "express";
 import aiRouter from "./routers/aiRouter";
 
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.set("view engine", "pug");
@@ -12,6 +13,6 @@ app.use("/static", express.static("assets"));
 app.use("/ai", aiRouter);
 
 
-app.listen(8080, function () {
-    console.log("서버 실행 포트는 8080번 입니다🚀")
+app.listen(PORT, function () {
+    console.log(`서버 실행 포트는 ${PORT}번 입니다🚀`)
 });
